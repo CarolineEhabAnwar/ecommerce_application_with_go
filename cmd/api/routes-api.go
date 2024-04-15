@@ -1,4 +1,4 @@
-package api
+package main
 
 import (
 	"net/http"
@@ -7,7 +7,7 @@ import (
 	"github.com/go-chi/cors"
 )
 
-func (application *application) routes() http.Handler {
+func (app *application) routes() http.Handler {
 	mux := chi.NewRouter()
 
 	mux.Use(cors.Handler(cors.Options{
